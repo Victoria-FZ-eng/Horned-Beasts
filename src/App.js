@@ -8,7 +8,7 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <p>lets start</p>
+
         <Header />
         <Main />
         <Footer />

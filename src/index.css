@@ -16,9 +16,7 @@ code {
 
 .horndiv{
   box-sizing: border-box;
-  border: 1px black solid;
-  width : 400px;
-  margin: 0 auto;
+  text-align: center;
   padding-bottom: 7px;
   font-family: 'Times New Roman', Times, serif;
  
@@ -50,4 +48,14 @@ code {
 
   font-family: 'Times New Roman', Times, serif;
  
+}
+
+.horndiv{
+  text-align: center;
+  padding: 15px;
+
+}
+
+.rendering{
+  background-color: linen;
 }

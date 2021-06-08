@@ -1,7 +1,9 @@
 import React from 'react';
 
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
 
 
 
@@ -14,6 +16,8 @@ class HornedBeasts extends React.Component{
 
         }
     }
+
+
 
     favorites = () => {
         this.setState({
@@ -35,11 +39,11 @@ class HornedBeasts extends React.Component{
               <Card.Body>
               <Card.Text>
               <p>Number of Horns: {this.props.horns} </p>
-              <p> {this.state.numberOfVotes} ❤️ Favorited</p>
+              <p> {this.state.numberOfVotes} ❤️ Favorite</p>
               <p>{this.props.desc}</p>
               <p>Keyword: {this.props.keyword}</p>
               </Card.Text>
-              {/* <Button variant="primary">Go somewhere</Button> */}
+              <Button variant="primary" onClick={this.props.event}>Pop</Button>
               </Card.Body>
             </Card>
             </div>

@@ -16,25 +16,25 @@ class App extends React.Component {
       img : 'URL',
       love : 0,
       description : 'Describing',
-      horn: 0
+      horn: 0,
+      show: false,
     }
 
     this.selectedCard = this.selectedCard.bind(this);
-    this.unselectedCard = this.unselectedCard.bind(this);
-
+    
   }
+  
+
 
   selectedCard=()=>{
-    this.setState=({
-      show : true
-      
-    })
+    if (this.state.show = true){
+      return <SelectedBeast name={this.state.name} img={this.state.img} love={this.state.love} description={this.state.description} horn={this.state.horn} />
+    }
+    else {
+      return null;
+    }
   }
    
-  unselectedCard=()=>{
-    this.setState =()=> {return null; }
-  }
-
 
   render(){
     return(
@@ -42,7 +42,7 @@ class App extends React.Component {
 
         <Header />
         <Main />
-        <SelectedBeast name={this.state.name} img={this.state.img} love={this.state.love} description={this.state.description} horn={this.state.horn} />
+        
         <Footer />
 
       </div>

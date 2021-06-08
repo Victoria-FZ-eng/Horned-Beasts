@@ -10,6 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import './App.scss';
 
 class SelectedBeast extends React.Component{
+
+    handleClicking=()=>{
+      this.props.show = false;
+      this.props.selctedCard;
+    }
    
 
     render(){
@@ -30,7 +35,7 @@ class SelectedBeast extends React.Component{
           
             <Modal.Footer>
               {/* <Button variant="primary">OK</Button> */}
-              <Button variant="secondary" onClick={(this.props.unselectedCard)}>Close</Button>
+              <Button variant="secondary" onClick={this.handleClicking}>Close</Button>
             </Modal.Footer>
           </Modal.Dialog>
            

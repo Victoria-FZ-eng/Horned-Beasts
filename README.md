@@ -76,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 img source passing as prop : [https://stackoverflow.com/questions/51184136/display-an-image-from-url-in-reactjs].
 
 lab 03 --> Adding Module and render it .
+lab 04 --> Adding a drop down list (form component from bootstrap) and then filter the cards based on what the user select.

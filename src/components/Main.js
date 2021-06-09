@@ -27,8 +27,6 @@ class Main extends React.Component{
                     
             })
              }</CardGroup>
-
-             <button onClick={this.props.pop}>Pop</button>
            </div> 
 
         );
@@ -36,3 +34,8 @@ class Main extends React.Component{
 }
 
 export default Main;
+
+
+
+
+

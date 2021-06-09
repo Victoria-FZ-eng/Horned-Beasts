@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 class HornedBeasts extends React.Component{
 
     constructor(props){
@@ -43,7 +44,8 @@ class HornedBeasts extends React.Component{
               <p>{this.props.desc}</p>
               <p>Keyword: {this.props.keyword}</p>
               </Card.Text>
-              <Button variant="primary" onClick={this.props.event}>Pop</Button>
+              <Button onClick={this.props.event}>Pop</Button>
+            
               </Card.Body>
             </Card>
             </div>

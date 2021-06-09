@@ -2,27 +2,22 @@ import React from 'react';
 
 import HornedBeasts from './HornedBeasts';
 import cards from './data.json';
-import { CardGroup } from 'react-bootstrap';
+
 
  
 
 class Main extends React.Component{
 
-    handleClicking(){
-      this.props.show=true;
-    }
+  
+  
+
 
     render(){
         return(
            <div >
-             <CardGroup>
-             
-             {
-               cards.map((cards)=>{
-               return <HornedBeasts  title={cards.title} imgurl={cards.image_url} desc={cards.description} horns={cards.horns} keyword={cards.keyword} event={this.handleClicking}/>
-                    
-            })
-             }</CardGroup>
+  
+             <HornedBeasts  title={this.props.title} imgurl={this.props.image} desc={this.props.desc} horns={this.props.horns} keyword={this.props.keyword} show={this.props.show} event={this.props.pop}  />
+                
            </div> 
 
         );

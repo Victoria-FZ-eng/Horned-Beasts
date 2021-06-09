@@ -11,33 +11,54 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class SelectedBeast extends React.Component{
 
-    handleClicking=()=>{
-      this.props.show = false;
-      this.props.selctedCard;
-    }
-   
 
     render(){
         return(
-            
-            <Modal.Dialog >
+
+         <>
+          {/* <Button variant="primary" onClick={handleShow}>
+            Launch demo modal
+          </Button> */}
+    
+          <Modal show={this.props.show} >
             <Modal.Header >
-              <Modal.Title> {this.props.name} </Modal.Title>
+              <Modal.Title>{this.props.name}</Modal.Title>
             </Modal.Header>
-          
             <Modal.Body>
               <img src={this.props.img} alt="Image of the Beast" />
               <p>{this.props.love}❤️</p>
               <p>How many horns? {this.props.horn}</p>
               <p>{this.props.description} </p>
-              
             </Modal.Body>
-          
             <Modal.Footer>
-              {/* <Button variant="primary">OK</Button> */}
-              <Button variant="secondary" onClick={this.handleClicking}>Close</Button>
+              <Button variant="secondary" onClick={this.props.close}>
+                Close
+              </Button>
+              {/* <Button variant="primary" >
+                Save Changes
+              </Button> */}
             </Modal.Footer>
-          </Modal.Dialog>
+          </Modal>
+          </>
+            
+          //   <Modal.Dialog >
+          //   <Modal.Header >
+          //     <Modal.Title> {this.props.name} </Modal.Title>
+          //   </Modal.Header>
+          
+          //   <Modal.Body>
+          //     <img src={this.props.img} alt="Image of the Beast" />
+          //     <p>{this.props.love}❤️</p>
+          //     <p>How many horns? {this.props.horn}</p>
+          //     <p>{this.props.description} </p>
+              
+          //   </Modal.Body>
+          
+          //   <Modal.Footer>
+          //     {/* <Button variant="primary">OK</Button> */}
+          //     <Button variant="secondary" onClick={this.handleClicking}>Close</Button>
+          //   </Modal.Footer>
+          // </Modal.Dialog>
            
         )
     }

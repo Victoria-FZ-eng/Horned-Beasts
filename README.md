@@ -71,7 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Victoria Notes:
+# My Notes:
 
 img source passing as prop : [https://stackoverflow.com/questions/51184136/display-an-image-from-url-in-reactjs].
 
+lab 03 --> Adding Module and render it .

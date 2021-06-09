@@ -7,32 +7,36 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Cards from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.scss';
+import Card from 'react-bootstrap/Card';
+
 
 class SelectedBeast extends React.Component{
-   
+
 
     render(){
         return(
-            
-            <Modal.Dialog >
+
+         <>
+    
+          <Modal show={this.props.show} >
             <Modal.Header >
-              <Modal.Title> {this.props.name} </Modal.Title>
+              <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
             </Modal.Header>
-          
             <Modal.Body>
-              <img src={this.props.img} alt="Image of the Beast" />
-              <p>{this.props.love}❤️</p>
-              <p>How many horns? {this.props.horn}</p>
-              <p>{this.props.description} </p>
-              
+              <Card.Img src={this.props.selectedBeast.image_url} alt="Image of the Beast" />
+              <p>{this.props.selectedBeast.description} </p>
             </Modal.Body>
-          
             <Modal.Footer>
-              {/* <Button variant="primary">OK</Button> */}
-              <Button variant="secondary" onClick={(this.props.unselectedCard)}>Close</Button>
+              <Button variant="secondary" onClick={this.props.close}>
+                Close
+              </Button>
+              {/* <Button variant="primary" >
+                Save Changes
+              </Button> */}
             </Modal.Footer>
-          </Modal.Dialog>
+          </Modal>
+          </>
+         
            
         )
     }

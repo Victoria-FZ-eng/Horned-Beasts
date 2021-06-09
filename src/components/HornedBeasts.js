@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 class HornedBeasts extends React.Component{
 
     constructor(props){
@@ -25,13 +26,15 @@ class HornedBeasts extends React.Component{
         })
     }
 
+     update=()=>{
+
+        this.props.event(this.props.title)
+
+     }    
+
     render(){
         return(
-            // <div className='horndiv'>
-            //     <h2 className='horn'>{this.props.title}</h2>
-            //     <img className='img' className='horn' src={this.props.imgurl} alt="Horned-Beast Photo" />
-            //     <p className='horn'>{this.props.desc} </p>
-            // </div>
+            
             <div className='horndiv'>
             <Card style={{ width: '18rem' }}>
               <Card.Title>{this.props.title}</Card.Title>
@@ -43,7 +46,8 @@ class HornedBeasts extends React.Component{
               <p>{this.props.desc}</p>
               <p>Keyword: {this.props.keyword}</p>
               </Card.Text>
-              <Button variant="primary" onClick={this.props.event}>Pop</Button>
+              <Button onClick={this.update}>Pop</Button>
+            
               </Card.Body>
             </Card>
             </div>

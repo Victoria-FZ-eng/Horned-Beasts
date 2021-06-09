@@ -1,12 +1,15 @@
 import React from 'react';
 
 import HornedBeasts from './HornedBeasts';
-import cards from './data.json';
 import { CardGroup } from 'react-bootstrap';
 
  
 
 class Main extends React.Component{
+
+  
+  
+
 
     render(){
         return(
@@ -14,11 +17,18 @@ class Main extends React.Component{
              <CardGroup>
              
              {
-               cards.map((cards)=>{
-               return <HornedBeasts  title={cards.title} imgurl={cards.image_url} desc={cards.description} horns={cards.horns} keyword={cards.keyword} event={this.props.selectedCard}/>
+               this.props.cards.map((cards)=>{
+               return(
+                 <div >
+                   <HornedBeasts  title={cards.title} imgurl={cards.image_url} desc={cards.description} horns={cards.horns} keyword={cards.keyword} show={this.props.show} event={this.props.pop}  />
+                   </div>
+               ) 
+               
                     
             })
              }</CardGroup>
+
+             <button onClick={this.props.pop}>Pop</button>
            </div> 
 
         );

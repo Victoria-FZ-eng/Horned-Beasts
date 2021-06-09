@@ -5,6 +5,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './components/Main'
 import SelectedBeast from './components/SelectedBeast';
+import cards from './components/data.json';
+
+
 
 
 class App extends React.Component {
@@ -12,37 +15,48 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      name:'Beast Name',
-      img : 'URL',
-      love : 0,
-      description : 'Describing',
-      horn: 0
-    }
-
-    this.selectedCard = this.selectedCard.bind(this);
-    this.unselectedCard = this.unselectedCard.bind(this);
-
-  }
-
-  selectedCard=()=>{
-    this.setState=({
-      show : true
       
+      show: false,
+      cards : cards,
+      selectedBeast : {},
+
+    }
+  }
+  
+  popUp =(title) =>{
+    let selectedBeast = cards.find((beast)=>{
+      if (beast.title === title){
+        return beast;
+      }
+    })
+    
+    this.setState({
+      show : true,
+      selectedBeast : selectedBeast,
+
     })
   }
-   
-  unselectedCard=()=>{
-    this.setState =()=> {return null; }
+
+  close = () =>{
+    this.setState({
+      show : false,
+
+    })
   }
 
+
+  
 
   render(){
     return(
       <div className='rendering'>
 
         <Header />
-        <Main />
-        <SelectedBeast name={this.state.name} img={this.state.img} love={this.state.love} description={this.state.description} horn={this.state.horn} />
+        
+        <Main pop={this.popUp} cards={this.state.cards}/>
+        
+        <SelectedBeast selectedBeast={this.state.selectedBeast}  show={this.state.show} close={this.close} />
+    
         <Footer />
 
       </div>

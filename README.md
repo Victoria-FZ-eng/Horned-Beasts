@@ -75,3 +75,4 @@ Victoria Notes:
 
 img source passing as prop : [https://stackoverflow.com/questions/51184136/display-an-image-from-url-in-reactjs].
 
+lab 02 --> desplaying a given data as cards ( using cards component from react bootstrap) and add a function depending on a user click.

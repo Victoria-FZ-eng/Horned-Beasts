@@ -75,3 +75,4 @@ Victoria Notes:
 
 img source passing as prop : [https://stackoverflow.com/questions/51184136/display-an-image-from-url-in-reactjs].
 
+lab 01 --> my first app on react , we created an app and includes 3 cards from cards components in react bootsrap / all static data props not state

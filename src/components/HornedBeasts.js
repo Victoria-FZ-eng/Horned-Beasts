@@ -1,7 +1,10 @@
 import React from 'react';
 
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
+
 
 
 
@@ -15,19 +18,23 @@ class HornedBeasts extends React.Component{
         }
     }
 
+
+
     favorites = () => {
         this.setState({
             numberOfVotes : this.state.numberOfVotes+1
         })
     }
 
+     update=()=>{
+
+        this.props.event(this.props.title)
+
+     }    
+
     render(){
         return(
-            // <div className='horndiv'>
-            //     <h2 className='horn'>{this.props.title}</h2>
-            //     <img className='img' className='horn' src={this.props.imgurl} alt="Horned-Beast Photo" />
-            //     <p className='horn'>{this.props.desc} </p>
-            // </div>
+            
             <div className='horndiv'>
             <Card style={{ width: '18rem' }}>
               <Card.Title>{this.props.title}</Card.Title>
@@ -35,11 +42,12 @@ class HornedBeasts extends React.Component{
               <Card.Body>
               <Card.Text>
               <p>Number of Horns: {this.props.horns} </p>
-              <p> {this.state.numberOfVotes} ❤️ Favorited</p>
+              <p> {this.state.numberOfVotes} ❤️ Favorite</p>
               <p>{this.props.desc}</p>
               <p>Keyword: {this.props.keyword}</p>
               </Card.Text>
-              {/* <Button variant="primary">Go somewhere</Button> */}
+              <Button onClick={this.update}>Pop</Button>
+            
               </Card.Body>
             </Card>
             </div>

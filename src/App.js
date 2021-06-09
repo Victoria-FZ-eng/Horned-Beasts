@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Main from './components/Main'
 import SelectedBeast from './components/SelectedBeast';
 import cards from './components/data.json';
-import { CardGroup } from 'react-bootstrap';
+
 
 
 
@@ -15,19 +15,25 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      name:'Beast Name',
-      img : 'URL',
-      love : 0,
-      description : 'Describing',
-      horn: 0,
+      
       show: false,
+      cards : cards,
+      selectedBeast : {},
 
     }
   }
   
-  popUp =() =>{
+  popUp =(title) =>{
+    let selectedBeast = cards.find((beast)=>{
+      if (beast.title === title){
+        return beast;
+      }
+    })
+    
     this.setState({
       show : true,
+      selectedBeast : selectedBeast,
+
     })
   }
 
@@ -35,13 +41,6 @@ class App extends React.Component {
     this.setState({
       show : false,
 
-
-      
-      name:'Beast Name',
-      img : 'URL',
-      love : 0,
-      description : 'Describing',
-      horn: 0,
     })
   }
 
@@ -53,16 +52,10 @@ class App extends React.Component {
       <div className='rendering'>
 
         <Header />
-        <CardGroup>
-        { 
-        cards.map((cards)=>{
-          return (
-            <Main pop={this.popUp} title={cards.title} image={cards.image_url} desc={cards.description} horns={cards.horns} keyword={cards.keyword}/>
-          )
-        })}
-        </CardGroup>
         
-        <SelectedBeast name={this.state.name} img={this.state.img} love={this.state.love} description={this.state.description} horn={this.state.horn}  show={this.state.show} close={this.close} />
+        <Main pop={this.popUp} cards={this.state.cards}/>
+        
+        <SelectedBeast selectedBeast={this.state.selectedBeast}  show={this.state.show} close={this.close} />
     
         <Footer />
 

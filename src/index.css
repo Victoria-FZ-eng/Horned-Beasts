@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.horndiv{
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 7px;
+  font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+.img{
+  height: 250px;
+  width: 300px;
+}
+.head{
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+ font-family: 'Times New Roman', Times, serif;
+
+}
+.foot{
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+ font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+.horn{
+
+  font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+.horndiv{
+  text-align: center;
+  padding: 15px;
+
+}
+
+.rendering{
+  background-color: linen;
+}

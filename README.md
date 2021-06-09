@@ -77,14 +77,7 @@ img source passing as prop : [https://stackoverflow.com/questions/51184136/displ
 
 
 lab 01 --> my first app on react , we created an app and includes 3 cards from cards components in react bootsrap / all static data props not state
-
-
-
-
-
-lab 03 --> Adding Module and render it .
-
-
-
-
+lab 02 --> adding cards from bootstrap components, passing props and objects ,
+lab 03 --> Adding Module and render it , passing functions.
+lab 04 --> Adding a drop down list (form component from bootstrap) and then filter the cards based on what the user select.
 
